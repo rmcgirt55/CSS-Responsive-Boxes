@@ -1,3 +1,53 @@
+* {
+  border: 1px solid black;
+}
+
 body {
   background: peachpuff;
 }
+
+div {
+  margin: .5em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.boxgrid {
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 2;
+  justify-content: space-between;
+}
+
+.a {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.b, .c, .d, .e, .f, .g {
+  flex-grow: 1;
+  width: 25%;
+}
+
+.h {
+  flex-grow: 3;
+}
+
+@media (min-width: 720px) {
+  .container {
+    flex-flow: row wrap;
+  }
+
+  .boxgrid {
+    width: 70%;
+  }
+
+  .h {
+    width: 25%;
+  }
+} 
